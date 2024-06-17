@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Responsive Web Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <style>
+        .section {
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            color: #666;
+        }
+        /* Inside styles.css or in <style> tag */
+
+.timeline {
+    position: relative;
+    margin-top: 20px;
+    padding: 20px 0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.timeline-content {
+    background-color: #fff;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.timeline-content p {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+/* Inside styles.css or in <style> tag */
+
+    .skills {
+    margin-top: 20px;
+    background-color: #fff;
+    padding: 20px 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.skill {
+    margin-bottom: 10px;
+
+}
+
+.skill-name {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.skill-bar {
+    height: 20px;
+    background-color: #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.skill-level {
+    height: 100%;
+    line-height: 20px;
+    text-align: right;
+    padding-right: 10px;
+    background-color: #4caf50;
+    color: white;
+    transition: width 1s ease-in-out;
+    border-radius: 5px;
+}
+/* Inside styles.css or in <style> tag */
+
+    .experience {
+    margin-top: 20px;
+}
+
+.experience-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Set background color to white */
+}
+
+.experience-details h3 {
+    margin-top: 0;
+    color: #333;
+}
+
+.experience-details p {
+    margin-bottom: 5px;
+    color: #666;
+}
+
+
+
+    </style>
+
+</head>
+<body>
+
+<div class="navbar">
+    <span class="menu-icon" onclick="toggleNav()">&#9776;</span>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<div class="contentt">
+    <h1>About Us</h1>
+
+    <!-- Education Section -->
+    <div class="section" style="background-color: #f0f0f0;">
+        <h2>Education</h2>
+        <!-- Education Section -->
+    <div class="timeline">
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>G.V & K. B. M EM School</h3>
+                <p>10th: 2018-2019</p>
+                <p>SGPA: 8.7</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Narayana Junior College</h3>
+                <p>Course: MPC 2019 - 2021</p>
+                <p>Percentage: 76.6%</p>
+            </div>
+        </div>
+        <div class="timeline-item">
+            <div class="timeline-content">
+                <h3>Pydah Engineering College</h3>
+                <p>Course: B.Tech (ECE)</p>
+                <p>Percentage: Course In Progress</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        <!-- Skills Section -->
+<div class="section" style="background-color: #e0e0e0;">
+    <h2>Skills</h2>
+    <div class="skills">
+        <div class="skill">
+            <div class="skill-name">Core Python</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 80%;">80%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Advanced Python</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 60%;">60%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">Data Analysis</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 60%;">60%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">SQL</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 60%;">60%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">BI Tools</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 60%;">60%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">AWS S3</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 75%;">75%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">HTML, CSS and JS</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 65%;">65%</div>
+            </div>
+        </div>
+        <div class="skill">
+            <div class="skill-name">DBMS</div>
+            <div class="skill-bar">
+                <div class="skill-level" style="width: 60%;">60%</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Experience Section -->
+<div class="section" style="background-color: #d0d0d0;">
+    <h2>Experience</h2>
+    <div class="experience">
+        <div class="experience-item">
+            <div class="experience-details">
+                <h3>Company: HMI Engineering Solutions</h3>
+                <p><strong>Location:</strong> Vizag</p>
+                <p><strong>Period:</strong> 1 Month</p>
+                <p><strong>Type:</strong> Internship</p>
+                <p><strong>Stream:</strong> Data Science</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    function toggleNav() {
+        var navLinks = document.getElementById("navLinks");
+        if (navLinks.style.width === "250px") {
+            navLinks.style.width = "0";
+        } else {
+            navLinks.style.width = "250px";
+        }
+    }
+</script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var skillLevels = document.querySelectorAll('.skill-level');
+        skillLevels.forEach(function(skillLevel) {
+            var width = skillLevel.style.width;
+            skillLevel.style.width = '0';
+            setTimeout(function() {
+                skillLevel.style.width = width;
+            }, 200); // Adjust the delay as needed
+        });
+    });
+</script>
+
+</body>
+</html>

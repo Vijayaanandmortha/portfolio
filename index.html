@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Vijayaanand's Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+
+    <style>
+        .typing-header {
+            font-size: 2em;
+            font-weight: bold;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 0.15em solid black;
+            display: inline-block;
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 16ch; } /* Adjust to fit the text length */
+        }
+
+        @keyframes blink-caret {
+            from, to { border-color: transparent; }
+            50% { border-color: black; }
+        }
+    </style>
+
+</head>
+<body>
+
+<div class="navbar">
+    <span class="menu-icon" onclick="toggleNav()">&#9776; Menu</span>
+    <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="contact.html">Contact</a>
+    </div>
+</div>
+
+<div class="content">
+    <div class="hero-section">
+        <h1 class="animated-header">Welcome to Vijayaanand's Portfolio</h1>
+        <p class="animated-subheader">I am a proficient Web Developer and Data Engineer.</p>
+    </div>
+
+    <div class="intro-section">
+        <h2 class="typing-header" id="typed-text"></h2>
+        <p>My name is Vijayaanand, and I am currently in my third year of B.Tech in Electronics 
+            and Communication Engineering (ECE). I am proficient in prompt engineering, web development,
+             Python and advanced Python, machine learning, and data analysis. My technical expertise is
+              complemented by my fluency in English and Telugu.
+            I bring three key strengths to any team: problem-solving, adaptability, and collaboration. 
+            My problem-solving skills allow me to develop innovative and efficient 
+            solutions to complex challenges, ensuring optimal performance and reliability. 
+            I am highly adaptable, quickly learning and integrating new technologies 
+            and methodologies to stay ahead in the ever-evolving tech landscape.
+             My collaborative approach ensures effective
+             teamwork and communication, fostering a productive and positive work environment.
+            By joining your team, I can contribute by developing cutting-edge web applications,
+             implementing robust machine learning models, and conducting insightful data analysis. My diverse skill set and strengths will enable me to deliver high-quality, scalable, and secure solutions that meet your needs and exceed expectations. I am committed to driving excellence and innovation, making me a valuable addition to your team.</p>
+    </div>
+
+    <div class="contact-section">
+        <h2>Contact Me</h2>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/vijayaanand-mortha" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Vijayaanandmortha" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/anandzlife/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/917675872493"><i class="fas fa-phone"></i></a>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleNav() {
+        var navLinks = document.getElementById("navLinks");
+        if (navLinks.style.width === "250px") {
+            navLinks.style.width = "0";
+        } else {
+            navLinks.style.width = "250px";
+        }
+    }
+
+    // Animation script for header and subheader
+    document.addEventListener('DOMContentLoaded', function() {
+        const header = document.querySelector('.animated-header');
+        const subheader = document.querySelector('.animated-subheader');
+
+        setTimeout(() => {
+            header.classList.add('fade-in');
+        }, 500);
+
+        setTimeout(() => {
+            subheader.classList.add('fade-in');
+        }, 1500);
+    });
+
+</script>
+
+<script>
+    const element = document.getElementById('typed-text');
+    const text = "Hi, I'm Vijayaanand";
+    let index = 0;
+    let isDeleting = false;
+
+    function type() {
+        if (isDeleting) {
+            if (index > 0) {
+                element.textContent = text.substring(0, index - 1);
+                index--;
+            } else {
+                isDeleting = false;
+            }
+        } else {
+            if (index < text.length) {
+                element.textContent = text.substring(0, index + 1);
+                index++;
+            } else {
+                isDeleting = true;
+            }
+        }
+
+        const speed = isDeleting ? 100 : 200; // Adjust typing and deleting speed here
+        const delay = isDeleting && index === 0 ? 1000 : speed; // Pause before retyping
+
+        setTimeout(type, delay);
+    }
+
+    type();
+</script>
+
+</body>
+</html>

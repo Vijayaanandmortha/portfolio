@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5; /* Light Gray */
+        }
+
+        h1 {
+            color: #1a73e8; /* Google Blue */
+        }
+
+        button {
+            background-color: #34a853; /* Google Green */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-bottom: 1rem;
+        }
+
+        button:hover {
+            background-color: #0f9d58; /* Darker Google Green */
+        }
+
+        .post {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 20px;
+            background-color: white; /* White background for posts */
+            position: relative; /* Positioning for remove button */
+        }
+
+        .post h2 {
+            margin-top: 0;
+            color: #1a73e8; /* Google Blue */
+        }
+
+        .post p {
+            margin: 5px 0;
+            color: #5f6368; /* Google Gray */
+        }
+
+        .remove-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #ea4335; /* Google Red */
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .remove-btn:hover {
+            background-color: #cc2c1d; /* Darker Google Red */
+        }
+    </style>
+</head>
+<body>
+    <h1>Admin Page</h1>
+    <form id="fetchForm">
+        <button type="submit">Fetch Data</button>
+    </form>
+    <div id="posts-container">
+        <!-- Blog posts will be inserted here -->
+    </div>
+
+    <!-- Firebase SDKs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1/firebase.js"></script>
+    <script>
+
+        if (!sessionStorage.getItem('isAuthenticated')) {
+            alert('You are not authenticated to view this page.');
+            window.close(); // Close the window if not authenticated
+        }
+
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+    apiKey: "AIzaSyBx0bMskTVFWOjiHMlcnIgQPvAQ01ZhFwU",
+    authDomain: "portfolio-contact-form-6cb07.firebaseapp.com",
+    databaseURL: "https://portfolio-contact-form-6cb07-default-rtdb.firebaseio.com",
+    projectId: "portfolio-contact-form-6cb07",
+    storageBucket: "portfolio-contact-form-6cb07.appspot.com",
+    messagingSenderId: "333505767242",
+    appId: "1:333505767242:web:06d571004e8244482ac3b3"
+  };
+
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        document.getElementById("fetchForm").addEventListener("submit", submitForm);
+
+        function submitForm(event) {
+            event.preventDefault(); // Prevent form from submitting
+
+            var db = firebase.database().ref('Submissions');
+
+            db.on('value', (snapshot) => {
+                const data = snapshot.val();
+                console.log(data);
+                displayData(data);
+            });
+        }
+
+        function displayData(data) {
+            const postsContainer = document.getElementById('posts-container');
+            postsContainer.innerHTML = '';  // Clear the container
+
+            for (let nameKey in data) {
+                if (data.hasOwnProperty(nameKey)) {
+                    for (let submissionKey in data[nameKey]) {
+                        if (data[nameKey].hasOwnProperty(submissionKey)) {
+                            const submission = data[nameKey][submissionKey];
+
+                            const postDiv = document.createElement('div');
+                            postDiv.className = 'post';
+
+                            const postTitle = document.createElement('h2');
+                            postTitle.textContent = submission.Name;
+                            postDiv.appendChild(postTitle);
+
+                            const postEmail = document.createElement('p');
+                            postEmail.textContent = `Company: ${submission.Email}`;
+                            postDiv.appendChild(postEmail);
+
+                            const postMessage = document.createElement('p');
+                            postMessage.textContent = `Message: ${submission.Message}`;
+                            postDiv.appendChild(postMessage);
+
+                            // Create remove button
+                            const removeButton = document.createElement('button');
+                            removeButton.className = 'remove-btn';
+                            removeButton.textContent = 'Remove';
+                            removeButton.addEventListener('click', () => {
+                                removeEntry(nameKey, submissionKey);
+                            });
+                            postDiv.appendChild(removeButton);
+
+                            postsContainer.appendChild(postDiv);
+                        }
+                    }
+                }
+            }
+        }
+
+        function removeEntry(nameKey, submissionKey) {
+            var db = firebase.database().ref('Submissions/' + nameKey + '/' + submissionKey);
+            db.remove()
+              .then(() => {
+                  console.log("Remove succeeded.");
+                  alert("Entry removed successfully!");
+              })
+              .catch((error) => {
+                  console.log("Remove failed: " + error.message);
+                  alert("Failed to remove entry: " + error.message);
+              });
+        }
+    </script>
+</body>
+</html>
