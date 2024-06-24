@@ -110,9 +110,10 @@
             }
 
             .container {
-                width: 100%;
+                width: 75%;
                 padding-left: 70px;
                 padding-right: 25px;
+                font-size: 1em;
             }
 
             .container::before {
@@ -148,13 +149,87 @@
         }
 
         .content a {
-    color: #333;
-    font-size: 1.5em;
-    transition: color 0.3s;
-}
+            color: #333;
+            font-size: 1.5em;
+            transition: color 0.3s;
+        }
 
-.content a:hover {
-    color: #4285F4; /* Change to Google's Blue on hover */
+        .content a:hover {
+            color: #4285F4; /* Change to Google's Blue on hover */
+        }
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px 0;
+            color: #333;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .footer-container div {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer h2 {
+            color: #4285F4; /* Google blue */
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        .footer-social a i {
+            font-size: 1.5rem;
+        }
+
+        .footer-social a:hover {
+            color: #4285F4; /* Google blue */
+        }
+
+        .footer-bottom {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+        .footer-contact p {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+            }
+
+            .footer-social h2 {
+                font-size: 1.5rem;
+            }
+
+            .footer-social a i{
+                font-size: 2rem;
+            }
+
+            .footer-contact p {
+                font-size: 1rem;
+                font-weight: 500;
+                text-align: left;
+            }
+
+            .footer-container div {
+                margin: 20px 0;
+            }
 }
 
     </style>
@@ -249,6 +324,27 @@
     });
 </script>
 
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-social">
+            <h2>Follow Me</h2>
+            <a href="https://linkedin.com/in/vijayaanand-mortha" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Vijayaanandmortha" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/anandzlife/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/917675872493"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="footer-contact">
+            <h2>Contact</h2>
+            <p>Email: vijayaanandmortha@gmail.com</p>
+            <p>Phone: +91 7675872493</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Vijayaanand Mortha. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
 </html>
