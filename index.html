@@ -28,13 +28,87 @@
             from, to { border-color: transparent; }
             50% { border-color: black; }
         }
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px 0;
+            color: #333;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .footer-container div {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer h2 {
+            color: #4285F4; /* Google blue */
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        .footer-social a i {
+            font-size: 1.5rem;
+        }
+        .footer-contact p {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .footer-social a:hover {
+            color: #4285F4; /* Google blue */
+        }
+
+        .footer-bottom {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+            }
+
+            .footer-social h2 {
+                font-size: 1.5rem;
+            }
+
+            .footer-social a i{
+                font-size: 2rem;
+            }
+
+            .footer-contact p {
+                font-size: 1rem;
+                font-weight: 500;
+                text-align: left;
+            }
+
+            .footer-container div {
+                margin: 20px 0;
+            }
+}
     </style>
 
 </head>
 <body>
 
 <div class="navbar">
-    <span class="menu-icon" onclick="toggleNav()">&#9776; Menu</span>
+    <span class="menu-icon" onclick="toggleNav()">&#9776;</span>
     <div class="nav-links" id="navLinks">
         <a href="index.html" class="active">Home</a>
         <a href="about.html">About</a>
@@ -64,16 +138,6 @@
              teamwork and communication, fostering a productive and positive work environment.
             By joining your team, I can contribute by developing cutting-edge web applications,
              implementing robust machine learning models, and conducting insightful data analysis. My diverse skill set and strengths will enable me to deliver high-quality, scalable, and secure solutions that meet your needs and exceed expectations. I am committed to driving excellence and innovation, making me a valuable addition to your team.</p>
-    </div>
-
-    <div class="contact-section">
-        <h2>Contact Me</h2>
-        <div class="social-icons">
-            <a href="https://linkedin.com/in/vijayaanand-mortha" target="_blank"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/Vijayaanandmortha" target="_blank"><i class="fab fa-github"></i></a>
-            <a href="https://www.instagram.com/anandzlife/" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/917675872493"><i class="fas fa-phone"></i></a>
-        </div>
     </div>
 </div>
 
@@ -134,6 +198,28 @@
 
     type();
 </script>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-social">
+            <h2>Follow Me</h2>
+            <a href="https://linkedin.com/in/vijayaanand-mortha" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Vijayaanandmortha" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/anandzlife/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/917675872493"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="footer-contact">
+            <h2>Contact</h2>
+            <p>Email: vijayaanandmortha@gmail.com</p>
+            <p>Phone: +91 7675872493</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Vijayaanand Mortha. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
 </html>
