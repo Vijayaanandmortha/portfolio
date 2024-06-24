@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Responsive Web Page</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
 
     <style>
         .section {
@@ -24,98 +26,172 @@
         }
         /* Inside styles.css or in <style> tag */
 
-.timeline {
-    position: relative;
-    margin-top: 20px;
-    padding: 20px 0;
-}
+        .timeline {
+            position: relative;
+            margin-top: 20px;
+            padding: 20px 0;
+        }
 
-.timeline-item {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
+        .timeline-item {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 20px;
+        }
 
-.timeline-content {
-    background-color: #fff;
-    padding: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+        .timeline-content {
+            background-color: #fff;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-.timeline-content h3 {
-    margin-top: 0;
-    color: #333;
-}
+        .timeline-content h3 {
+            margin-top: 0;
+            color: #333;
+        }
 
-.timeline-content p {
-    margin-bottom: 5px;
-    color: #666;
-}
+        .timeline-content p {
+            margin-bottom: 5px;
+            color: #666;
+        }
 
-/* Inside styles.css or in <style> tag */
+        /* Inside styles.css or in <style> tag */
 
-    .skills {
-    margin-top: 20px;
-    background-color: #fff;
-    padding: 20px 30px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+        .skills {
+            margin-top: 20px;
+            background-color: #fff;
+            padding: 20px 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-.skill {
-    margin-bottom: 10px;
+        .skill {
+            margin-bottom: 10px;
 
-}
+        }
 
-.skill-name {
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #333;
-}
+        .skill-name {
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
 
-.skill-bar {
-    height: 20px;
-    background-color: #ccc;
-    border-radius: 5px;
-    overflow: hidden;
-}
+        .skill-bar {
+            height: 20px;
+            background-color: #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+        }
 
-.skill-level {
-    height: 100%;
-    line-height: 20px;
-    text-align: right;
-    padding-right: 10px;
-    background-color: #4caf50;
-    color: white;
-    transition: width 1s ease-in-out;
-    border-radius: 5px;
-}
-/* Inside styles.css or in <style> tag */
+        .skill-level {
+            height: 100%;
+            line-height: 20px;
+            text-align: right;
+            padding-right: 10px;
+            background-color: #4caf50;
+            color: white;
+            transition: width 1s ease-in-out;
+            border-radius: 5px;
+        }
+        /* Inside styles.css or in <style> tag */
 
-    .experience {
-    margin-top: 20px;
-}
+            .experience {
+            margin-top: 20px;
+        }
 
-.experience-item {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    background-color: #fff; /* Set background color to white */
-}
+        .experience-item {
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            background-color: #fff; /* Set background color to white */
+        }
 
-.experience-details h3 {
-    margin-top: 0;
-    color: #333;
-}
+        .experience-details h3 {
+            margin-top: 0;
+            color: #333;
+        }
 
-.experience-details p {
-    margin-bottom: 5px;
-    color: #666;
+        .experience-details p {
+            margin-bottom: 5px;
+            color: #666;
+        }
+        .footer {
+            background-color: #f1f1f1;
+            padding: 20px 0;
+            color: #333;
+            text-align: center;
+        }
+
+        .footer-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .footer-container div {
+            flex: 1;
+            margin: 10px;
+        }
+
+        .footer h2 {
+            color: #4285F4; /* Google blue */
+        }
+
+        .footer-social a {
+            margin: 0 10px;
+            color: #333;
+            transition: color 0.3s ease;
+        }
+        .footer-social a i {
+            font-size: 1.5rem;
+        }
+        .footer-contact p {
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+
+        .footer-social a:hover {
+            color: #4285F4; /* Google blue */
+        }
+
+        .footer-bottom {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                flex-direction: column;
+            }
+
+            .footer-social h2 {
+                font-size: 1.5rem;
+            }
+
+            .footer-social a i{
+                font-size: 2rem;
+            }
+
+            .footer-contact p {
+                font-size: 1rem;
+                font-weight: 500;
+                text-align: left;
+            }
+
+            .footer-container div {
+                margin: 20px 0;
+            }
 }
 
 
@@ -262,6 +338,28 @@
         });
     });
 </script>
+
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-social">
+            <h2>Follow Me</h2>
+            <a href="https://linkedin.com/in/vijayaanand-mortha" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/Vijayaanandmortha" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.instagram.com/anandzlife/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/917675872493"><i class="fas fa-phone"></i></a>
+        </div>
+        <div class="footer-contact">
+            <h2>Contact</h2>
+            <p>Email: vijayaanandmortha@gmail.com</p>
+            <p>Phone: +91 7675872493</p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Vijayaanand Mortha. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
 </html>
