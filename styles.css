@@ -22,6 +22,7 @@ body {
 .navbar a:hover {
     background-color: #34A853; /* Google's Green */
     color: white;
+    width: 100%;
 }
 
 .navbar a.active {
